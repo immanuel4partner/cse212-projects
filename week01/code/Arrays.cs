@@ -14,19 +14,19 @@ public static class Arrays
         // step by step before you write the code. The plan should be clear enough that it could
         // be implemented by another person.
 
-        return []; // replace this return statement with your own
-
+    
         // Step 1: Initialize a new double array of the specified 'length'.
         double[] result = new double[length];
-        // Step 2: Loop from 1 up to 'length' (inclusive).
-        for (int i = 1; i <= length; i++)
-        {
-            // Step 3: In each iteration, calculate the multiple (number * current index).
-            result[i] = number * i;
-        }
-        // Step 4: Store the result in the array (at index i - 1).
-        // Step 5: Return the completed array.
-        return result; 
+
+        // Step 2: Loop through each position in the array.
+        for (int i = 0; i < length; i++)
+    {
+        // Step 3: Store the multiples of number.
+        result[i] = number * (i + 1);
+    }
+
+        // Step 4: Return the completed array.
+        return result;
     }
 
     /// <summary>
@@ -56,8 +56,5 @@ public static class Arrays
         // Step 5: Add the rotated parts back in the correct order: last part first, then the front part.
         data.InsertRange(0, movedPart);
 
-        data.Clear();
-        data.AddRange(tail);
-        data.AddRange(head);
     }
 }
